@@ -7,7 +7,9 @@
     "soft-b": "babel src/main.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "serve": "live-server public",
     "dev-server": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:prod": "webpack -p --env production",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "express": "^4.16.4",
     "live-server": "^1.2.0",
     "node-sass": "^4.9.4",
     "normalize.css": "^8.0.0",
